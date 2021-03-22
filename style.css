@@ -1,0 +1,538 @@
+@font-face {
+  font-family: digitalFont;
+  src: url("Super Smash TV.ttf");
+}
+
+body {
+  background-color: #000;
+}
+#titleScreen {
+  position: relative;
+  margin: auto;
+  width: 800px;
+  height: 600px;
+  border: 10px solid #555;
+  background-image: url("img/titleBg.jpg");
+}
+#mainTitle {
+  text-align: center;
+  margin: auto;
+  margin-top: 25px;
+  font-family: digitalFont;
+  font-size: 48px;
+  line-height: 48px;
+  color: red;
+}
+#advScreen {
+  position: relative;
+  margin: auto;
+  width: 800px;
+  height: 600px;
+  border: 10px solid #555;
+  background: url("img/fire.gif");
+}
+#gameWonScreen {
+  position: relative;
+  margin: auto;
+  width: 800px;
+  height: 600px;
+  border: 10px solid #555;
+}
+
+h2 {
+  text-align: center;
+  margin: auto;
+  font-family: digitalFont;
+  font-size: 20px;
+  color: #fff;
+  margin-bottom: 15px;
+  z-index: 1;
+}
+#stats {
+  position: absolute;
+  width: 192px;
+  height: 162px;
+  left: 40px;
+  top: 40px;
+}
+#statList {
+  font-family: digitalFont;
+  font-size: 20px;
+  color: #fff;
+  list-style-type: none;
+  padding: 4px;
+  margin-top: 4px;
+}
+
+#battleItems {
+  position: absolute;
+  bottom: 20px;
+  left: 300px;
+  width: 192px;
+  height: 192px;
+  border: 4px solid #fff;
+}
+#potion {
+  width: 125px;
+  height: 40px;
+  border: 4px solid #fff;
+  background-color: #000;
+  color: #fff;
+  font-family: digitalFont;
+  text-align: center;
+  font-size: 24px;
+  margin: 0 10px 0 10px;
+  display: inline;
+}
+#potion:hover {
+  background-color: #fff;
+  color: #000;
+}
+#hiPotion {
+  width: 125px;
+  height: 40px;
+  border: 4px solid #fff;
+  background-color: #000;
+  color: #fff;
+  font-family: digitalFont;
+  text-align: center;
+  font-size: 18px;
+  margin: 10px 10px 0 10px;
+  display: inline;
+}
+#hiPotion:hover {
+  background-color: #fff;
+  color: #000;
+}
+#potionAmt {
+  font-size: 24px;
+  color: yellow;
+  font-family: digitalFont;
+  display: inline;
+}
+#hiPotionAmt {
+  font-size: 24px;
+  color: yellow;
+  font-family: digitalFont;
+  display: inline;
+}
+
+#battleButton {
+  position: absolute;
+  border: 0;
+  width: 200px;
+  height: 200px;
+  bottom: 40px;
+  left: 40px;
+  background: url("img/battleButton.jpg");
+}
+#battleButton:hover {
+  background: url("img/battleButtonHover.jpg");
+}
+#battleButton:active {
+  background: url("img/battleButtonClicked.jpg");
+}
+
+#shopButton {
+  position: absolute;
+  border: 0;
+  width: 200px;
+  height: 200px;
+  bottom: 40px;
+  right: 40px;
+  background: url("img/shopButton.jpg");
+}
+#shopButton:hover {
+  background: url("img/shopButtonHover.jpg");
+}
+#shopButton:active {
+  background: url("img/shopButtonClicked.jpg");
+}
+
+#bossButton {
+  position: absolute;
+  border: 0;
+  width: 200px;
+  height: 200px;
+  bottom: 40px;
+  right: 300px;
+  background: url("img/bossButton.jpg");
+}
+#bossButton:hover {
+  background: url("img/bossButtonHover.jpg");
+}
+#bossButton:active {
+  background: url("img/bossButtonClicked.jpg");
+}
+
+#gameContainer {
+  position: relative;
+  width: 800px;
+  height: 420px;
+  background-color: #000;
+  border-style: solid;
+  border-color: #555;
+  border-width: 10px 10px 5px 10px;
+  margin: auto;
+}
+#actionContainer {
+  position: relative;
+  width: 800px;
+  height: 170px;
+  background-color: #000;
+  border-style: solid;
+  border-color: #555;
+  border-width: 5px 10px 10px 10px;
+  margin: auto;
+
+}
+
+#shopScreen {
+  position: relative;
+  width: 800px;
+  height: 600px;
+  background-color: #000;
+  border-style: solid;
+  border-color: #555;
+  border-width: 10px 10px 10px 10px;
+  margin: auto;
+}
+#itemOne {
+  margin-top: 50px;
+  border: none;
+  position: absolute;
+  width: 370px;
+  height: 120px;
+  left: 60px;
+  top: 200px;
+  background: url("img/potionBuyButton.jpg");
+}
+#itemOne:hover {
+  background: url("img/potionBuyButtonHover.jpg");
+}
+#shopGold {
+  text-align: center;
+  margin: auto;
+  font-family: digitalFont;
+  font-size: 24px;
+  color: yellow;
+  margin-bottom: 15px;
+  margin-top: 20px;
+  z-index: 1;
+}
+#itemTwo {
+  margin-top: 50px;
+  border: none;
+  position: absolute;
+  width: 470px;
+  height: 120px;
+  left: 60px;
+  top: 350px;
+  background: url("img/hiPotionBuyButton.jpg");
+}
+#itemTwo:hover {
+  background: url("img/hiPotionBuyButtonHover.jpg");
+}
+#shopDialog {
+  width: 400px;
+  text-align: center;
+  margin: auto;
+  margin-top: 50px;
+  font-family: digitalFont;
+  font-size: 24px;
+  color: red;
+  z-index: 1;
+}
+#homeButton {
+  border: 0px;
+  background: url("img/homeButton.jpg");
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  top: 10px;
+  left: 10px;
+}
+#homeButton:hover {
+  background: url("img/homeButtonHover.jpg");
+}
+
+#startDiv {
+  display: flex;
+}
+#startGame {
+  border: none;
+  width: 300px;
+  height: 120px;
+  background: url("img/startButton.jpg");
+  margin: auto;
+  margin-top: 100px;
+}
+#startGame:hover {
+  background: url("img/startButtonHover.jpg");
+}
+#startGame:active {
+  background: url("img/startButtonClicked.jpg");
+}
+
+#title {
+  text-align: center;
+  margin: auto;
+  margin-top: 15px;
+  line-height: 30px;
+  font-family: digitalFont;
+  font-size: 30px;
+  color: #fff;
+  z-index: 1;
+}
+#shopTitle {
+  text-align: center;
+  margin: auto;
+  margin-top: 15px;
+  font-family: digitalFont;
+  line-height: 30px;
+  font-size: 30px;
+  color: #fff;
+  z-index: 1;
+}
+#potionCost {
+  position: absolute;
+  font-size: 48px;
+  color: yellow;
+  font-family: digitalFont;
+  left: 470px;
+  top: 245px;
+}
+#hiPotionCost {
+  position: absolute;
+  font-size: 48px;
+  color: yellow;
+  font-family: digitalFont;
+  left: 570px;
+  top: 395px;
+}
+
+#battleOverlay {
+  position: absolute;
+  top: 0;
+  z-index: 2;
+}
+#battleDialog {
+  width: 400px;
+  text-align: center;
+  margin: auto;
+  margin-top: 50px;
+  font-family: digitalFont;
+  font-size: 24px;
+  color: red;
+  z-index: 1;
+}
+
+#bossScreen {
+  position: relative;
+  margin: auto;
+  width: 800px;
+  height: 600px;
+  border: 10px solid #555;
+}
+#bossScreenTitle {
+  text-align: center;
+  margin: auto;
+  margin-top: 15px;
+  font-family: digitalFont;
+  font-size: 30px;
+  color: #fff;
+  z-index: 1;
+}
+#bossChallengeOne {
+  position: absolute;
+  border: 0;
+  width: 200px;
+  height: 200px;
+  bottom: 40px;
+  left: 40px;
+  background: url("img/bossOneButton.jpg");
+}
+#bossChallengeOne:hover {
+  background: url("img/bossOneButtonHover.jpg");
+}
+#bossChallengeOne:active {
+  background: url("img/bossOneButtonHover.jpg");
+}
+
+#bossChallengeTwo {
+  position: absolute;
+  border: 0;
+  width: 200px;
+  height: 200px;
+  bottom: 40px;
+  right: 300px;
+  background: url("img/bossTwoButton.jpg");
+}
+#bossChallengeTwo:hover {
+  background: url("img/bossTwoButtonHover.jpg");
+}
+#bossChallengeTwo:active {
+  background: url("img/bossTwoButtonHover.jpg");
+}
+
+#bossChallengeThree {
+  position: absolute;
+  border: 0;
+  width: 200px;
+  height: 200px;
+  bottom: 40px;
+  right: 40px;
+  background: url("img/bossThreeButton.jpg");
+}
+#bossChallengeThree:hover {
+  background: url("img/bossThreeButtonHover.jpg");
+}
+#bossChallengeThree:active {
+  background: url("img/bossThreeButtonHover.jpg");
+}
+
+
+#nextButton {
+  position: absolute;
+  border: none;
+  left: 131px;
+  top: 40px;
+  width: 124px;
+  height: 48px;
+  background: url("img/nextButton.jpg");
+}
+#nextButton:hover {
+  background: url("img/nextButtonHover.jpg");
+}
+#nextButton:active {
+  background: url("img/nextButtonClicked.jpg");
+}
+
+#battleWonLoss {
+  border: none;
+  margin: auto;
+  margin-top: 30px;
+  width: 124px;
+  height: 48px;
+  border: 4px solid #fff;
+  background-color: #000;
+  font-family: digitalFont;
+  color: #fff;
+  font-size: 30px;
+}
+#battleWonLoss:hover {
+  background-color: #fff;
+  color: #000;
+}
+
+#gameWinButton {
+  display: block;
+  margin: auto;
+  margin-top: 30px;
+  width: 124px;
+  height: 48px;
+  border: 4px solid #fff;
+  background-color: #000;
+  font-family: digitalFont;
+  color: #fff;
+  font-size: 30px;
+}
+#gameWinButton:hover {
+  background-color: #fff;
+  color: #000;
+}
+#gameWonDialog {
+  width: 400px;
+  text-align: center;
+  margin: auto;
+  margin-top: 50px;
+  font-family: digitalFont;
+  font-size: 24px;
+  color: SkyBlue;
+  z-index: 1;
+}
+
+
+#character {
+  position: absolute;
+  left: 50px;
+  top: 250px;
+  z-index: 0;
+}
+#charDamage {
+  position: absolute;
+  left: 50px;
+  top: 250px;
+  z-index: 1;
+}
+#enemyOne {
+  position: absolute;
+  right: 50px;
+  bottom: 10px;
+  z-index: 0;
+}
+#eDamage {
+  position: absolute;
+  right: 50px;
+  top: 250px;
+  z-index: 1;
+}
+
+#attackButton {
+  position: absolute;
+  border: none;
+  left: 131px;
+  top: 40px;
+  width: 124px;
+  height: 48px;
+  background: url("img/attackButton1.jpg");
+}
+#attackButton:hover {
+  border: none;
+  width: 124px;
+  height: 48px;
+  background: url("img/attackButton1Hover.jpg");
+}
+#attackButton:active {
+  border: none;
+  width: 124px;
+  height: 48px;
+  background: url("img/attackButton1Clicked.jpg");
+}
+
+#itemsButton {
+  position: absolute;
+  border: none;
+  left: 131px;
+  bottom: 25px;
+  width: 124px;
+  height: 48px;
+  background: url("img/itemsButton1.jpg");
+}
+#itemsButton:hover {
+  border: none;
+  width: 124px;
+  height: 48px;
+  background: url("img/itemsButton1Hover.jpg");
+}
+#itemsButton:active {
+  border: none;
+  width: 124px;
+  height: 48px;
+  background: url("img/itemsButton1Clicked.jpg");
+}
+
+#enemyHP {
+  position: absolute;
+  right: 75px;
+  bottom: 25px;
+  width: 48px;
+  height: 130px;
+}
+#charHP {
+  position: absolute;
+  left: 75px;
+  bottom: 25px;
+  width: 48px;
+  height: 130px;
+}

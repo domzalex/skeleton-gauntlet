@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+  <div id="titleScreen" style="display: block;">
+    <h1 id="mainTitle">S K E L E T O N<br>G A U N T L E T</h1>
+    <div id="startDiv">
+      <button id="startGame" onclick="gameStart()"></button>
+    </div>
+  </div>
+
+  <div id="advScreen" style="display: none;">
+    <h1 id="title">S K E L E T O N<br>G A U N T L E T</h1>
+    <div id="stats">
+      <h2>S T A T S</h2>
+      <ul id="statList">
+        <li id="lvlStat">LVL: </li>
+        <li id="healthStat">HP: </li>
+        <li id="expStat">EXP: </li>
+        <li id="nextLvlStat">NEXT LVL: </li>
+        <li id="moneyStat">G O L D: </li>
+      </ul>
+    </div>
+    <button id="battleButton" onclick="overlayStart()"></button>
+    <button id="shopButton" onclick="shopStart()"></button>
+    <button id="bossButton" onclick="bossBattleScreen()"></button>
+  </div>
+  <div id="gameWonScreen" style="display: none;">
+    <h1 id="mainTitle">S K E L E T O N<br>G A U N T L E T</h1>
+    <h1 id="gameWonDialog"></h1>
+    <button id="gameWinButton" onclick="gameStart()">N E X T</button>
+  </div>
+  <div id="mainScreen" style="display: none;">
+    <div id="gameContainer">
+      <h1 id="title">S K E L E T O N<br>G A U N T L E T</h1>
+      <p id="battleDialog"></p>
+      <img id="battleOverlay" src="img/battleStartOverlay.gif" style="display: none;">
+      <button id="battleWonLoss" onclick="battleWonLossButton()" style="display: none;">N E X T</button>
+      <img id="enemyOne" src="img/enemy1.gif"/>
+      <img id="character" src="img/char.gif"/>
+      <img id="charDamage" src="img/damage1.gif"/>
+      <img id="eDamage" src="img/damage.gif"/>
+
+      <div id="battleItems" style="display: none;">
+        <h2>I T E M S</h2>
+        <button id="potion" onclick="usePotion()">P O T I O N</button>
+        <p id="potionAmt"></p>
+        <button id="hiPotion" onclick="useHiPotion()">H I - P O T I O N</button>
+        <p id="hiPotionAmt"></p>
+      </div>
+
+    </div>
+    <div id="actionContainer">
+      <img id="charHP" src="img/hpBar100.jpg">
+      <button id="nextButton" onclick="nextButtonClick()" style="display: none;"></button>
+      <button id="attackButton" style="display: none;" onclick="attack()"></button>
+      <button id="itemsButton" onclick="showItems()"></button>
+      <img id="enemyHP" src="img/hpBar100.jpg">
+    </div>
+  </div>
+  <div id="shopScreen" style="display: none;">
+    <button id="homeButton" onclick="gameStart()"></button>
+    <h1 id="shopTitle">I T E M<br>S H O P</h1>
+    <h2 id="shopGold"></h2>
+    <p id="shopDialog"></p>
+    <button id="itemOne" onclick="buyPotion()"></button>
+    <p id="potionCost">20 GOLD</p>
+    <img id="itemAdd" src="img/transp.png">
+    <button id="itemTwo" onclick="buyHiPotion()"></button>
+    <p id="hiPotionCost">200 GOLD</p>
+    <button id="itemThree" style="display: none;"></button>
+  </div>
+  <div id="bossScreen" style="display: none;">
+    <button id="homeButton" onclick="gameStart()"></button>
+    <h1 id="bossScreenTitle">C H A L L E N G E S</h1>
+    <button id="bossChallengeOne" onclick="bossOne = 1; bossBattleCheck();"></button>
+    <button id="bossChallengeTwo" onclick="bossTwo = 1; bossBattleCheck();"></button>
+    <button id="bossChallengeThree" onclick="bossThree = 1; bossBattleCheck();"></button>
+  </div>
+
+
+    <script src="script.js"></script>
+  </body>
+</html>
